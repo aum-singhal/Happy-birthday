@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <script
+    src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  <script
+    src="https://unpkg.com/aframe-text-geometery-component@^0.5.0/dist/aframe-text-geometery-component.min.js"></script>
+</head>
+
+<body style='margin: 0px; overflow:hidden;'>
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-box position='0 0.5 0' material='opacity: 0.5;'>
+    </a-box>
+
+    <a-marker-camera present='hiro'>
+    </a-marker-camera>
+
+    <a-assets>
+      </a-asset-item id="cake-obj"
+        src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/cake.obj">
+      </a-asset-item>
+      <a-asset-item id="cake-mtl"
+        src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/cake.mtl"></a-asset-item>
+      <a-asset-item id="brush"
+        src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/brush.json">
+      </a-asset-item>
+
+      <audio id="bday"
+        src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/bday.mp3"></audio>
+    </a-assets>
+
+    <a-obj-model src="#cake-obj" mtl="#cake-mtl" rotation="60 20 -155" scale="1 0.5 1"></a-obj-model>
+
+    <a-entity rotation="-120 0 0" scale="1 1 1">
+      <a-entity position="-1 0.1 -1" material="color: red" scale="0.5 0.5 0.5"
+        textx-geometry="value: Happy Birthday Dad; font: #brush"
+        sound="src:#bday; autoplay: true; loop: true; on:click"></a-entity>
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>
