@@ -22,13 +22,7 @@
     </a-marker-camera>
 
     <a-assets>
-      </a-asset-item id="cake-obj" src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/cake.obj">	
-      </a-asset-item>	
-  
-      <a-asset-item id="cake-mtl"	src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/cake.mtl">
-      </a-asset-item>
-  
-      <a-asset-item id="brush" src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/brush.json">
+     <a-asset-item id="brush" src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/brush.json">
       </a-asset-item>
 
       <audio id="bday"
@@ -38,9 +32,12 @@
     <a-entity gltf-model="url(./scene.gltf)" rotation="45 30 -155" position="-0.2 0.2 0" scale="0.1 0.08 0.1></a-entity>
 
     <a-entity rotation="-120 0 0" scale="1 1 1">
-      <a-entity position="-1 0.1 -1" material="color: red" scale="0.5 0.5 0.5"
-        textx-geometry="value: Happy Birthday Dad; font: #brush"
-        sound="src:#bday; autoplay: true; loop: true; on:click"></a-entity>
+      <a-entity position="-0.3 0.1 0" 
+                material="color: red"
+                scale="1 1 1"
+                textx-geometry="value: Happy Birthday Dad; font: #brush"
+                sound="src:#bday; autoplay: true; loop: true; on:click">
+      </a-entity>
     </a-entity>
   </a-scene>
 </body>
