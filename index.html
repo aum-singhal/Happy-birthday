@@ -29,7 +29,14 @@
         src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/bday.mp3"></audio>
     </a-assets>
 
-    <a-entity gltf-model="url(./scene.gltf)" rotation="45 30 -155" position="-0.2 0.2 0" scale="0.1 0.08 0.1></a-entity>
+    <a-entity gltf-model="url(./scene.gltf)" rotation="45 30 -155" position="-0.2 0.2 0" scale="0.1 0.08 0.1>
+        <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite">
+        </a-animation>                                                                                            
+    </a-entity>
                                                                                                 
     <a-text value="Happy Birthday Dad"></a-text>
 
