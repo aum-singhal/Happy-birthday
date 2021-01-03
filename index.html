@@ -16,7 +16,8 @@
     <a-box position='0 0.8 0' material='opacity: 0.0;'>
     </a-box>
 
-    
+    <a-marker-camera present='hiro'>
+    </a-marker-camera>
 
     <a-assets>
      <a-asset-item id="brush" src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/brush.json">
@@ -28,9 +29,9 @@
     
     
 
-    <a-entity gltf-model="url(./scene.gltf)" rotation="45 30 -155" position="-0.2 0.2 0" scale="0.09 0.08 0.09>
+    <a-entity gltf-model="url(./scene.gltf)" rotation="45 30 -155" position="-0.2 0.2 0" scale="0.09 0.08 0.09">
     </a-entity>
-    <a-text value="Happy Birthday Dad" width="7" position="-1 0 1" rotation="-120 0 0" color="red"></a-text>
+    <a-text value="Happy Birthday Dad" width="5" position="-1 0 0" rotation="-120 0 0" color="red" ></a-text>
 
     <a-entity rotation="-120 0 0" scale="1 1 1">
       <a-entity sound="src:#bday; autoplay: true; loop: true; on:click">
